@@ -64,14 +64,6 @@ const teamMembers: TeamMember[] = [
     role: "Medical Advisor",
     bio: "Respiratory disease specialist providing clinical insights and validation for AI diagnostic models.",
     imgSrc: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=80"
-  },
-  {
-    id: 8,
-    name: "Fatima Ibrahim",
-    role: "ML Engineer",
-    institution: "1517 Fund",
-    bio: "Specializes in optimizing machine learning models for deployment on resource-constrained edge devices.",
-    imgSrc: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=80"
   }
 ];
 
