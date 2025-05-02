@@ -1,5 +1,4 @@
 
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Card, CardContent } from "@/components/ui/card";
 
 type TeamMember = {
@@ -92,13 +91,7 @@ const TeamSection = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {teamMembers.map((member) => (
             <Card key={member.id} className="bg-white border-none hover:shadow-lg transition-shadow duration-300">
-              <CardContent className="p-6 text-center">
-                <Avatar className="h-24 w-24 mx-auto mb-4 border-2 border-primary">
-                  <AvatarImage src={member.imgSrc} alt={member.name} />
-                  <AvatarFallback className="bg-primary/10 text-primary text-xl">
-                    {member.name.split(" ").map(name => name[0]).join("")}
-                  </AvatarFallback>
-                </Avatar>
+              <CardContent className="p-6">
                 <h3 className="font-bold text-lg text-gray-900 mb-1">{member.name}</h3>
                 <p className="text-sm font-medium text-primary mb-1">{member.role}</p>
                 {member.institution && (
