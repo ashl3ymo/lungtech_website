@@ -1,5 +1,4 @@
-
-import { Microscope, Lungs, Video } from "lucide-react";
+import { Stethoscope, Microscope, Video } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 const AboutSection = () => {
@@ -17,7 +16,7 @@ const AboutSection = () => {
           <Card className="border-none shadow-lg hover:shadow-xl transition-shadow">
             <CardContent className="pt-6">
               <div className="mb-4 w-12 h-12 rounded-full bg-medical-100 flex items-center justify-center mx-auto">
-                <Lungs className="h-6 w-6 text-medical-600" />
+                <Stethoscope className="h-6 w-6 text-medical-600" />
               </div>
               <h3 className="text-xl font-bold text-center mb-2">AI-Powered Detection</h3>
               <p className="text-gray-600 text-center">

@@ -1,6 +1,6 @@
 
 import { useState } from "react";
-import { Lungs } from "lucide-react";
+import { Stethoscope } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Navbar = () => {
@@ -16,7 +16,7 @@ const Navbar = () => {
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <a href="#" className="flex-shrink-0 flex items-center">
-              <Lungs className="h-8 w-8 text-primary" />
+              <Stethoscope className="h-8 w-8 text-primary" />
               <span className="ml-2 text-xl font-bold text-gray-900">CoughVision</span>
             </a>
           </div>

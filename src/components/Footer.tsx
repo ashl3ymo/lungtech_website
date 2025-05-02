@@ -1,5 +1,4 @@
-
-import { Lungs } from "lucide-react";
+import { Stethoscope } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -8,7 +7,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-1">
             <div className="flex items-center mb-4">
-              <Lungs className="h-8 w-8 text-medical-300" />
+              <Stethoscope className="h-8 w-8 text-medical-300" />
               <span className="ml-2 text-xl font-bold text-white">CoughVision</span>
             </div>
             <p className="text-sm text-gray-400 mb-4">
