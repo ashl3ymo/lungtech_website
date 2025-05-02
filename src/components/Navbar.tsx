@@ -27,6 +27,9 @@ const Navbar = () => {
             <a href="#research" className="text-gray-700 hover:text-primary transition-colors">
               Research
             </a>
+            <a href="#team" className="text-gray-700 hover:text-primary transition-colors">
+              Team
+            </a>
             <a href="#partners" className="text-gray-700 hover:text-primary transition-colors">
               Partners
             </a>
@@ -82,6 +85,13 @@ const Navbar = () => {
               onClick={() => setIsMenuOpen(false)}
             >
               Research
+            </a>
+            <a
+              href="#team"
+              className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Team
             </a>
             <a
               href="#partners"
