@@ -1,13 +1,17 @@
-
 import { useState } from "react";
-import { Stethoscope } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const openContactModal = () => {
+    setIsModalOpen(true);
+    if (isMenuOpen) setIsMenuOpen(false);
   };
 
   return (
@@ -16,27 +20,38 @@ const Navbar = () => {
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <a href="#" className="flex-shrink-0 flex items-center">
-              <Stethoscope className="h-8 w-8 text-primary" />
-              <span className="ml-2 text-xl font-bold text-gray-900">CoughVision</span>
+              <img
+                src="/images/logo.png"
+                alt="Lungtech Logo"
+                className="h-12 w-auto"
+              />
             </a>
           </div>
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#about" className="text-gray-700 hover:text-primary transition-colors">
+            <a
+              href="#about"
+              className="text-gray-700 hover:text-primary transition-colors"
+            >
               About
             </a>
-            <a href="#research" className="text-gray-700 hover:text-primary transition-colors">
+            <a
+              href="#research"
+              className="text-gray-700 hover:text-primary transition-colors"
+            >
               Research
             </a>
-            <a href="#team" className="text-gray-700 hover:text-primary transition-colors">
-              Team
-            </a>
-            <a href="#partners" className="text-gray-700 hover:text-primary transition-colors">
+            <a
+              href="#partners"
+              className="text-gray-700 hover:text-primary transition-colors"
+            >
               Partners
             </a>
-            <a href="#contact" className="text-gray-700 hover:text-primary transition-colors">
-              Contact
+            <a
+              href="#team"
+              className="text-gray-700 hover:text-primary transition-colors"
+            >
+              Team
             </a>
-            <Button className="bg-primary hover:bg-primary/90">Get Involved</Button>
           </div>
           <div className="md:hidden flex items-center">
             <button
@@ -87,13 +102,6 @@ const Navbar = () => {
               Research
             </a>
             <a
-              href="#team"
-              className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Team
-            </a>
-            <a
               href="#partners"
               className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary"
               onClick={() => setIsMenuOpen(false)}
@@ -101,14 +109,74 @@ const Navbar = () => {
               Partners
             </a>
             <a
-              href="#contact"
+              href="#team"
               className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary"
               onClick={() => setIsMenuOpen(false)}
             >
-              Contact
+              Team
             </a>
-            <div className="px-3 py-2">
-              <Button className="w-full bg-primary hover:bg-primary/90">Get Involved</Button>
+
+          </div>
+        </div>
+      )}
+
+      {/* Contact Modal Overlay */}
+      {isModalOpen && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+          {/* Modal Content */}
+          <div className="bg-white rounded-3xl shadow-xl w-full max-w-md relative">
+            <button
+              onClick={() => setIsModalOpen(false)}
+              className="absolute top-4 right-4 text-gray-500 hover:text-gray-700"
+            >
+              <svg
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+
+            <div className="p-6">
+              <h3 className="text-xl font-bold mb-4">Send us a message</h3>
+
+              <form
+                action="https://formspree.io/f/manjyyav"
+                method="POST"
+                className="space-y-4"
+              >
+                <div>
+                  <input
+                    name="email"
+                    type="email"
+                    placeholder="Your Email"
+                    required
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50"
+                  />
+                </div>
+                <div>
+                  <textarea
+                    name="message"
+                    placeholder="Your Message"
+                    rows={4}
+                    required
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50"
+                  />
+                </div>
+                <Button
+                  type="submit"
+                  className="w-full py-5 text-base font-medium"
+                >
+                  Submit
+                </Button>
+              </form>
             </div>
           </div>
         </div>

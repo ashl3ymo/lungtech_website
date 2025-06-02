@@ -11,6 +11,11 @@ export default {
 	],
 	prefix: "",
 	theme: {
+		fontFamily: {
+			heading: ['Raleway', 'sans-serif'],
+			body: ['Montserrat', 'sans-serif'],
+			sans: ['Montserrat', 'sans-serif'],
+		},
 		container: {
 			center: true,
 			padding: '2rem',
