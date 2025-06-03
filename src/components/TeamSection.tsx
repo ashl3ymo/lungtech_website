@@ -66,10 +66,10 @@ const teamMembers: TeamMember[] = [
   },
   {
     id: 7,
-    name: "Dr. Afriyie",
-    role: "Head Research Assistant",
+    name: "Dr. Akosua Afriyie-AnsahRank",
+    role: "Emergency Medicine Resident",
     institution: "KATH",
-    bio: "",
+    bio: "Head Research Assistant in ongoing Lungtech study.",
     imgSrc:
       "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=80",
   },

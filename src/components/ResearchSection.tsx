@@ -4,7 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const ResearchSection = () => {
   return (
-    <section id="research" className="bg-gray-50 pb-12">
+    <section id="research" className="bg-white pb-12">
       <div className="section-container">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold mb-4">Research & Demos</h2>

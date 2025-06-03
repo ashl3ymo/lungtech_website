@@ -3,7 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const AboutSection = () => {
   return (
-    <section id="about" className="bg-white">
+    <section id="about" className="bg-gray-50">
       <div className="section-container">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold mb-4">About Lungtech</h2>
